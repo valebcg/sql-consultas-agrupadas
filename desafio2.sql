@@ -49,7 +49,7 @@ R:fuente| sum
 
 PUNTO 6: ¿Qué  día  se  inscribieron  la  mayor  cantidad  de  personas  y cuántas personas se 
 inscribieron en ese día?
-SELECT fecha, SUM(cantidad) FROM inscritos GROUP BY fecha ORDER BY SUM(cantidad) DESC LIMIT 1;
+SELECT fecha, SUM(cantidad) FROM inscritos GROUP BY fecha ORDER BY MAX(cantidad) DESC LIMIT 1;
 R:  fecha    | sum
 ------------+-----
  2021-08-01 | 182
