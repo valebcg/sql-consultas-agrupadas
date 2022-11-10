@@ -53,7 +53,6 @@ SELECT fecha, SUM(cantidad) FROM inscritos GROUP BY fecha ORDER BY SUM(cantidad)
 R:  fecha    | sum
 ------------+-----
  2021-08-01 | 182
--- SELECT fecha, SUM(cantidad) FROM inscritos GROUP BY fecha HAVING SUM(cantidad) = (SELECT cantidad FROM   (SELECT fecha, SUM(cantidad) AS cantidad FROM inscritos GROUP BY fecha ORDER BY SUM(cantidad) DESC LIMIT 1) AS hola ); 
 
 
 PUNTO 7: ¿Qué días se inscribieron la mayor cantidad de personas utilizando el blog y cuántas personas fueron?
